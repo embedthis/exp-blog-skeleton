@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><@= meta.title @></title>
+    <@ partial('header') @>
+    <@ partial('scripts') @>
+</head>
+<body>
+    <@ partial('nav') @>
+    <div class="content">
+        <@ content @>
+    </div>
+    <@ partial('footer') @>
+</body>
+</html>

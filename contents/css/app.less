@@ -1,0 +1,201 @@
+/*
+    app.less
+ */
+
+html, body {
+    height: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: @font-size;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: @font-family;
+}
+
+.masthead {
+    background-color: #333;
+    height: @masthead-height;
+    padding: 1em 0 0 1em;
+    a.logo {
+        float: left;
+        padding-right: 60px;
+        color: white;
+        font-size: 2em;
+    }
+    .menu {
+        margin-top: 0.5em;
+        a {
+        margin: 0;
+            padding: 1.5em;
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.content {
+	min-height: 100%;
+    background: white;
+    position: relative;
+    top: @masthead-height;
+    padding: 1em 4em 2em 2em;
+    .blog {
+        .home {
+            font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Julius Sans One', sans-serif;
+            color: @gray-light;
+        }
+        .post {
+            margin-top: 1.25em;
+            @media (min-width: @mobile-break) {
+                margin-right: 280px;
+            }
+            .summary {
+                h1 {
+                    a { 
+                        font-size: 1.5em;
+                        color: rgba(0, 0, 0, 0.8);
+                    }
+                    a:hover {
+                        color: @link-color;
+                    }
+                    margin-bottom: 1em;
+                }
+                padding: 2em 0 2em 0;
+                margin-bottom: 1em;
+                border-bottom: 1px dotted @border-light;
+                .read {
+                    padding-top: 2em;
+                    clear: both;
+                }
+            }
+            .archives {
+                padding-top: 1.5em;
+                a {
+                    font-size: 1.25em;
+                    color: @gray-lighter;
+                }
+            }
+            time {
+                font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+                font-size: 1.2em;
+                text-transform: uppercase;
+                color: @gray-lighter;
+                display: block;
+            }
+            h1 {
+                margin-bottom: 1.5em;
+            }
+            h2 {
+            }
+            h3 {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+            h1, h2, h3 {
+                clear: both;
+            }
+            p {
+                vertical-align: baseline;
+            }
+            img {
+                float: left;
+                margin: 0 30px 30px 10px;
+                max-width: 100%;
+            }
+            footer {
+                font-size: 0.9em;
+                .byline {
+                    padding: 2em 0 2em 0;
+                    margin-bottom: 1em;
+                    border-bottom: 1px dotted @border-light;
+                    .date {
+                        &::before, &::after {
+                            content: "\2022 ";
+                            padding: 0 .4em 0 .2em;
+                            display: inline-block;
+                        }
+                    }
+                }
+                .social {
+                    padding: 2em 0 2em 0;
+                }
+            }
+        }
+        .sidebar {
+            position: fixed;
+            top: 80px;
+            right: 0;
+            left: auto;
+            height: 100%;
+            width: 280px;
+            padding: 1.3em;
+            padding-bottom: 160px;
+            overflow-y: auto;
+            z-index: 102;
+            box-shadow: 0px 0px 20px rgba(39, 41, 43, 0.15);
+
+            font-size: 0.85em;
+            h3 {
+                border-bottom: 1px solid @gray-lightest;
+            }
+            .about {
+                padding-bottom: 2em;
+            }
+            .recent {
+                padding-bottom: 1em;
+                padding: 0;
+                margin: 0;
+            }
+            .links {
+                p { 
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+        &::-webkit-scrollbar {
+            width: 0px !important;
+        }
+        .categories {
+            padding: 1em;
+            table {
+                border-collapse: collapse;
+                border: 1px solid @border-light;
+                tr.post {
+                    td {
+                        border: 1px solid @border-light;
+                        padding: 1em;
+                    }
+                    a {
+                        color: darken(@link-color, 9%);
+                    }
+                    .year {
+                        font-size: 1.4em;
+                        color: @gray-light;
+                        vertical-align: middle;
+                    }
+                    .date {
+                        white-space: nowrap;
+                        color: @gray-light;
+                        text-transform: uppercase;
+                        vertical-align: middle;
+                    }
+                    .title {
+                        font-size: 1.4em;
+                        vertical-align: middle;
+                    }
+                    .posted {
+                        padding: 0.5em 0 0.3em 0;
+                        color: @gray-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+a { 
+    text-decoration: none;
+}

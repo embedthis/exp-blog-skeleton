@@ -1,0 +1,8 @@
+                    <div class="desktop-only sidebar">
+                        <@ partial('blog-sidebar-search') @>
+                        <@ partial('blog-sidebar-about') @>
+                        <@ partial('blog-sidebar-recent') @>
+                        <@ partial('blog-sidebar-archive') @>
+                        <@ partial('blog-sidebar-social') @>
+                        <@ partial('blog-sidebar-links') @>
+                    </div>

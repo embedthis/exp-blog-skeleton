@@ -1,0 +1,14 @@
+{
+    layout: 'default'
+}
+    <div class="blog">
+        <div class="ui page">
+            <div class="post">
+                <@ partial('blog-post-header') @>
+                <@ content @>
+                <@ partial('blog-post-footer') @>
+                <@ partial('blog-social') @>
+            </div>
+        </div>
+        <@ partial('blog-sidebar') @>
+    </div>

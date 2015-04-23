@@ -1,0 +1,5 @@
+    
+    <div class="recent">
+        <h3>Recent Posts</h3>
+        <@ renderBlogRecent() @>
+    </div>

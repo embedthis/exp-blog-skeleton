@@ -1,0 +1,39 @@
+/*
+    expansive.json - Configuration for exp-blog-skeleton
+ */
+{
+    meta: {
+        blog: {
+            site: 'https://myblog.example.com',
+            title: 'Displayed Blog Title',
+            description: 'Multi-word Blog Description',
+            author: {
+                name: "First Last",
+                image: 'images/blog/author.jpg',
+                about: 'I am just a humble blogger.'
+            },
+            google: {
+                id: 'google-id',
+                name: 'Google-account-name'
+            },
+            twitter: {
+                id: 'twitter-id',
+                name: "User-Name",
+            },
+            sites: {
+                'example.com': 'https://example.com/'
+            },
+            search: 'https://google.com/search',
+        },
+    },
+    services: {
+        blog: {
+            home: '.',
+            categories: 'categories',
+            posts: 'posts',
+            recent: 5,
+            rss: true,
+        }
+    }
+}
+

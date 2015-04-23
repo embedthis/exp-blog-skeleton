@@ -1,0 +1,11 @@
+{
+    layout: 'default'
+}
+    <div class="blog">
+        <div class="ui page">
+            <div class="archive">
+                <@ content @>
+            </div>
+        </div>
+        <@ partial('blog-sidebar') @>
+    </div>
