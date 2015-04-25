@@ -11,7 +11,7 @@
         <div class="google">
             <h3>Google+</h3>
             <p><a href="http://plus.google.com//@={meta.blog.google.id}?rel=author">
-                <img src="http://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16">
+                <img src="https://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16">
                 @={meta.blog.google.name}</a></p>
         </div>
         <@ } @>
