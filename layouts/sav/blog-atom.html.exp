@@ -6,7 +6,7 @@
     <updated>@={meta.isoDate}</updated>
     <id>@={meta.blog.site}</id>
     <author>
-        <name><![CDATA[@={meta.blog.author.name}]]></name>
+        <name><![CDATA[@={meta.blog.author}]]></name>
     </author>
     <generator uri="http://embedthis.com/expansive/">Expansive</generator>
     <@ content @>

@@ -15,4 +15,16 @@
                 @={meta.blog.google.name}</a></p>
         </div>
         <@ } @>
+
+        <@ if (meta.blog.youtube) { @>
+        <div class="youtube">
+            <h3>YouTube</h3>
+            <p>
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channelid="@={meta.blog.youtube.id}" 
+                    data-layout="default" data-count="hidden"></div>
+                @={meta.blog.youtube.name}</a>
+            </p>
+        </div>
+        <@ } @>
     </div>

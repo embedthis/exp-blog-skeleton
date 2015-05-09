@@ -6,5 +6,5 @@
         <link href="@={meta.url}"/>
         <updated>@={meta.isoDate}</updated>
         <id>@={meta.url}</id>
-        <content type="html"><![CDATA[<@ content @>]]></content>
+        <content type="html"><![CDATA[<@ content @>]]</content>
     </entry>

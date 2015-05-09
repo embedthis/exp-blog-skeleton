@@ -20,6 +20,10 @@
                 id: 'twitter-id',
                 name: "User-Name",
             },
+            "youtube": {
+                "id": "youtube-id",
+                "name": "User Name"
+            },
             sites: {
                 'example.com': 'https://example.com/'
             },
