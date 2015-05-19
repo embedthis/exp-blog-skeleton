@@ -1,4 +1,4 @@
-                        <span>
+                        <div>
                             <script src="https://apis.google.com/js/platform.js" async defer></script>
                             <div class="g-plusone" data-size="medium" data-annotation="bubble" data-width="300"></div>
-                        </span>
+                        </div>

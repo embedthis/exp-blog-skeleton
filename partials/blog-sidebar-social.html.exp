@@ -3,15 +3,15 @@
         <@ if (meta.blog.twitter) { @>
         <div class="twitter">
             <h3>Twitter</h3>
-            <p>Follow @<a href="http://twitter.com/@={meta.blog.twitter.id}">@={meta.blog.twitter.name}</a></p>
+            <p>Follow @<a href="http://twitter.com/@={meta.blog.twitter.id}" alt="twitter">@={meta.blog.twitter.name}</a></p>
         </div>
         <@ } @>
 
         <@ if (meta.blog.google) { @>
         <div class="google">
             <h3>Google+</h3>
-            <p><a href="http://plus.google.com//@={meta.blog.google.id}?rel=author">
-                <img src="https://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16">
+            <p><a href="http://plus.google.com//@={meta.blog.google.id}?rel=author" alt="google+">
+                <img src="https://www.google.com/images/icons/ui/gprofile_button-16.png" width="16" height="16" alt="g+">
                 @={meta.blog.google.name}</a></p>
         </div>
         <@ } @>
@@ -19,12 +19,12 @@
         <@ if (meta.blog.youtube) { @>
         <div class="youtube">
             <h3>YouTube</h3>
-            <p>
-                <script src="https://apis.google.com/js/platform.js"></script>
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div>
                 <div class="g-ytsubscribe" data-channelid="@={meta.blog.youtube.id}" 
                     data-layout="default" data-count="hidden"></div>
-                @={meta.blog.youtube.name}</a>
-            </p>
+                @={meta.blog.youtube.name}
+            </div>
         </div>
         <@ } @>
     </div>

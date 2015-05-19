@@ -1,16 +1,17 @@
-    <div class="ui search grid">
-        <div class="twelve wide column">
+    <div class="search">
+        <div class="rss">
+            <a href="@~@={meta.blog.home}/atom.xml" rel="subscribe-rss" title="subscribe via RSS">
+                <img src="@~images/rss.png" alt="rss">
+            </a>
+        </div>
+        <div class="query">
             <form action="@={meta.blog.search}" method="GET">
                 <div class="ui right icon input">
                     <i class="search icon"></i>
-                    <input class="search" type="text" name="q" results="0" placeholder="Search">
-                    <input type="hidden" name="q" value="site:@={meta.blog.site}">
+                    <input class="search" type="text" name="q" placeholder="Search" title="q">
+                    <input type="hidden" name="q" value="site:@={meta.blog.site}" title="site">
+                    <input type="submit" title="submit">
                 </div>
             </form>
-        </div>
-        <div class="two wide column">
-            <a href="@~@={meta.blog.home}/atom.xml" rel="subscribe-rss" title="subscribe via RSS">
-                <div class="rss">&nbsp;</div>
-            </a>
         </div>
     </div>
