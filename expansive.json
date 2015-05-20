@@ -4,39 +4,39 @@
 {
     meta: {
         blog: {
-            site: 'https://myblog.example.com',
-            title: 'Displayed Blog Title',
-            description: 'Multi-word Blog Description',
-            author: {
+            '?site': 'https://myblog.example.com',
+            '?title': 'Displayed Blog Title',
+            '?description': 'Multi-word Blog Description',
+            '?author': {
                 name: "First Last",
                 image: 'images/blog/author.jpg',
                 about: 'I am just a humble blogger.'
             },
-            google: {
+            '?google': {
                 id: 'google-id',
                 name: 'Google-account-name'
             },
-            twitter: {
+            '?twitter': {
                 id: 'twitter-id',
                 name: "User-Name",
             },
-            "youtube": {
+            '?youtube': {
                 "id": "youtube-id",
                 "name": "User Name"
             },
-            sites: {
+            '?sites': {
                 'example.com': 'https://example.com/'
             },
-            search: 'https://google.com/search',
+            '?search': 'https://google.com/search',
         },
     },
     services: {
         blog: {
-            home: '.',
-            categories: 'categories',
-            posts: 'posts',
-            recent: 5,
-            rss: true,
+            '?home': '.',
+            '?categories': 'categories',
+            '?posts': 'posts',
+            '?recent': 5,
+            '?rss': true,
         }
     }
 }
