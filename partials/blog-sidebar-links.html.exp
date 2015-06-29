@@ -2,7 +2,9 @@
 
     <div class="links">
         <h3>Links</h3>
-        <@ for (let [site, url] in meta.blog.sites) { @>
-            <p><a href="@={url}">@={site}</a></p>
-        <@ } @>
+        <ul>
+            <@ for (let [site, url] in meta.blog.sites) { @>
+                <li><a href="@={url}">@={site}</a></li>
+            <@ } @>
+        </ul>
     </div>

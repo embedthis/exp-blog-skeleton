@@ -8,6 +8,7 @@
                 <@ content @>
                 <@ partial('blog-post-footer') @>
                 <@ partial('blog-social') @>
+                <@ partial('blog-comments') @>
             </div>
         </div>
         <@ partial('blog-sidebar') @>

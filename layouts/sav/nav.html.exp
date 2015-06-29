@@ -1,7 +1,0 @@
-
-    <div class="masthead">
-        <a class="logo" href="@~index.html">@={meta.blog.title}</a>
-        <div class="menu">
-            <a class="<@= active('Archive') @>" href="@~archive.html">Archive</a>
-        </div>
-    </script>

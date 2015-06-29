@@ -1,2 +1,0 @@
-                <time datetime="@={meta.date}" pubdate><@= meta.date.format('%b %e, %Y') @></time>
-                <h1>@={meta.title}</h1>

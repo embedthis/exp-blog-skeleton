@@ -10,7 +10,6 @@
                     <i class="search icon"></i>
                     <input class="search" type="text" name="q" placeholder="Search" title="q">
                     <input type="hidden" name="q" value="site:@={meta.blog.site}" title="site">
-                    <input type="submit" title="submit">
                 </div>
             </form>
         </div>

@@ -4,4 +4,5 @@
     <meta name="description" content="<@= meta.description || meta.title @>">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     <@ renderStyles() @>
+    <@ renderScripts() @>
 

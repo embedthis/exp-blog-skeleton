@@ -1,6 +1,0 @@
-                <footer>
-                    <@ partial('blog-byline') @>
-    <!--
-                    <div class="related">Related Post: </div>
-    -->
-                </footer>

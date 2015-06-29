@@ -12,6 +12,7 @@
                 image: 'images/blog/author.jpg',
                 about: 'I am just a humble blogger.'
             },
+            '?comments': false,
             '?google': {
                 id: 'google-id',
                 name: 'Google-account-name'
