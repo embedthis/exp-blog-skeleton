@@ -1,0 +1,13 @@
+<@ if (meta.blog.comments && meta.comments !== false) { @>
+    <div class="comments">
+        __COMMENTS__
+    </div>
+    <@ if (meta.comments == 'closed') { @>
+        <div class="ui red ribbon label">Comments Closed</div>
+    <@ } else { @>
+        <div class="post-comment">
+            <button class="ui tiny blue button" onclick="$('.make-comment.modal').modal('show');">Post a comment</button>
+        </div>
+        <@ partial('blog-comment-form') @>
+    <@ } @>
+<@ } @>

@@ -6,7 +6,7 @@
             <h1 class="home">@={meta.title}</h1>
             <div class="post">
                 <@ content @>
-                <div class="archives"><a href="@~@={meta.blog.home}/archive.html">&mdash; Blog Archives &mdash;</a></div>
+                <div class="archives"><a href="@~/@={meta.blog.home}/archive.html">&mdash; Blog Archives &mdash;</a></div>
             </div>
         </div>
         <@ partial('blog-sidebar') @>
