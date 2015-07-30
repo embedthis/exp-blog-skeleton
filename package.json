@@ -1,7 +1,7 @@
 {
     "name": "exp-blog-skeleton",
     "description": "Blog Skeleton for Expansive",
-    "version": "0.1.4",
+    "version": "0.1.6",
     "keywords": [
         "expansive-plugin",
         "blog"
@@ -13,6 +13,9 @@
         "exp-reload": "~0.2",
         "exp-blog": "~0.2",
         "exp-md": "~0.2"
+    },
+    "devDependencies": {
+        "pak": ">=0.11.3"
     },
     "licenses": "GPL",
     "repository": {
@@ -35,7 +38,6 @@
             "to": "${TOP}",
             "overwrite": false
         },
-        "manage": "expansive.json",
-        "version": ">=0.10.0"
+        "manage": "expansive.json"
     }
 }
