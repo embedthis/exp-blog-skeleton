@@ -1,0 +1,73 @@
+    <div class="make-comment ui fullscreen modal transition scrolling hidden" style="top: 745px;">
+        <i class="close icon"></i>
+        <div class="header">
+            Make a Comment
+        </div>
+        <div class="content">
+            <form class="ui form comment-data">
+                <div class="field">
+                    <label>Your Thoughts</label>
+                    <textarea name="message" placeholder="Your words ..."></textarea>
+                </div>
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder="Your Name"></input>
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Email address"></input>
+                </div>
+                <input type="hidden" name="url" value="@={meta.url}"></input>
+                <input type="hidden" name="administrator" value="@={meta.blog.comments.administrator}"></input>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui green button" id="send">Send</div>
+        </div>
+    </div>
+
+    <div id="accepted" class="confirmation ui small modal transition hidden" style="top: 745px;">
+        <div class="header">
+            Thank You!
+        </div>
+        <div class="content">
+            <p>Messages are moderated.</p>
+            <p>Your message will be posted shortly.</p>
+        </div>
+        <div class="actions">
+            <div class="ui green button">OK</div>
+        </div>
+    </div>
+
+    <div id="rejected" class="confirmation ui small modal transition hidden" style="top: 745px;">
+        <div class="header">
+            Sorry
+        </div>
+        <div class="content">
+            <p>Your message could not be processed at this time.</p>
+            <p>Error: "<span id='errorMessage'></span>"</p>
+            <p>Please retry later.</p>
+        </div>
+        <div class="actions">
+            <div class="ui green button">OK</div>
+        </div>
+    </div>
+
+    <script>
+        $("#send").click(function() {
+            var data = $('.comment-data');
+            $.ajax({
+                type: 'POST',
+                url: '<@= meta.top + '/' + meta.blog.comments.process @>', 
+                data: data.serialize(), 
+                success: function() {
+                    $('#accepted').modal('show');
+                },
+                error: function(xh, status, error) {
+                    $('#errorMessage').text(error);
+                    $('#rejected').modal('show');
+                },
+            });
+        });
+    </script>
