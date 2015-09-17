@@ -22,8 +22,8 @@
             </form>
         </div>
         <div class="actions">
-            <div class="ui button">Cancel</div>
-            <div class="ui green button" id="send">Send</div>
+            <div class="ui cancel button">Cancel</div>
+            <div class="ui green approve button" id="send">Send</div>
         </div>
     </div>
 
@@ -36,7 +36,7 @@
             <p>Your message will be posted shortly.</p>
         </div>
         <div class="actions">
-            <div class="ui green button">OK</div>
+            <div class="ui green approve button">OK</div>
         </div>
     </div>
 
@@ -50,24 +50,26 @@
             <p>Please retry later.</p>
         </div>
         <div class="actions">
-            <div class="ui green button">OK</div>
+            <div class="ui green approve button">OK</div>
         </div>
     </div>
 
     <script>
-        $("#send").click(function() {
-            var data = $('.comment-data');
-            $.ajax({
-                type: 'POST',
-                url: '<@= meta.top + '/' + meta.blog.comments.process @>', 
-                data: data.serialize(), 
-                success: function() {
-                    $('#accepted').modal('show');
-                },
-                error: function(xh, status, error) {
-                    $('#errorMessage').text(error);
-                    $('#rejected').modal('show');
-                },
+        document.addEventListener("DOMContentLoaded", function(event) {
+            $("#send").click(function() {
+                var data = $('.comment-data');
+                $.ajax({
+                    type: 'POST',
+                    url: '<@= meta.top + '/' + meta.blog.comments.process @>', 
+                    data: data.serialize(), 
+                    success: function() {
+                        $('#accepted').modal('show');
+                    },
+                    error: function(xh, status, error) {
+                        $('#errorMessage').text(error);
+                        $('#rejected').modal('show');
+                    },
+                });
             });
         });
     </script>
