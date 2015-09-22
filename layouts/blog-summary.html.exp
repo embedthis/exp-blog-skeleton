@@ -2,7 +2,7 @@
     layout: ''
 }
     <div class="summary">
-        <time datetime="@={meta.date}" pubdate><@= meta.date.format('%b %e, %Y') @></time>
+        <time datetime="@={meta.isoDate}"><@= meta.date.format('%b %e, %Y') @></time>
         <h1><a href="@~/@={meta.url}"><@= meta.title @></a></h1>
         <@ content @>
         <div class="read">
