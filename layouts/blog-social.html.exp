@@ -4,11 +4,7 @@
     <@ partial('header') @>
 </head>
 <body>
-    <@ partial('nav') @>
-    <div class="content">
-        <@ content @>
-    </div>
-    <@ partial('footer') @>
+    <@ content @>
     <@ partial('scripts') @>
 </body>
 </html>

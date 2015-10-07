@@ -1,4 +1,8 @@
-    <div class="social">
+{
+    layout: 'blog-social'
+}
+
+    <div class="social-sidebar">
         <@ if (meta.blog.twitter) { @>
         <div class="twitter">
             <h3>Twitter</h3>
@@ -10,7 +14,7 @@
         <div class="google">
             <h3>Google+</h3>
             <p><a href="http://plus.google.com//@={meta.blog.google.id}?rel=author">
-                <img src="@~/images/gplus.png" width="16" height="16" alt="g+">
+                <img src="/images/gplus.png" width="16" height="16" alt="g+">
                 @={meta.blog.google.name}</a></p>
         </div>
         <@ } @>
@@ -18,10 +22,12 @@
         <@ if (meta.blog.youtube) { @>
         <div class="youtube">
             <h3>YouTube</h3>
-            <p><a href="https://www.youtube.com/channel/@={meta.blog.youtube.id}">
-                <img src="@~/images/youtube.jpg" alt="youtube" _width="16" _height="26">
+            <script src="https://apis.google.com/js/platform.js"></script>
+            <div>
+                <div class="g-ytsubscribe" data-channelid="@={meta.blog.youtube.id}"
+                    data-layout="default" data-count="hidden"></div>
                 @={meta.blog.youtube.name}
-            </a></p>
+            </div>
         </div>
         <@ } @>
     </div>

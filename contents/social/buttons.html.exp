@@ -1,0 +1,6 @@
+{
+    layout: 'blog-social'
+}
+
+<@ partial('blog-twitter') @>
+<@ partial('blog-googleplus') @>

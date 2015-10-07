@@ -1,0 +1,43 @@
+{
+    layout: ''
+}
+    <!-- Note: this page will be Ajax downloaded and may be injected into arbitrary URLs -->
+     
+    <div id="login-panel">
+        <div id="login-dialog" class="login ui very small modal transition scrolling hidden">
+            <i class="close icon"></i>
+            <div class="header login">
+                Login
+            </div>
+            <div class="content">
+                <form id="login-form" class="ui form" action="@={meta.abstop.join('user/login')}" method="POST">
+                    <div class="field">
+                        <label>Username</label>
+                        <input type="text" name="username" placeholder="username">
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="****">
+                    </div>
+                    <% inputSecurityToken(); %>
+                    <div class="actions">
+                        <button type="submit" class="ui primary button">OK</button>
+                        <div class="ui cancel button">Cancel</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="login-rejected" class="confirmation ui small modal transition hidden">
+            <div class="header">
+                Login Failed
+            </div>
+            <div class="content">
+                <p>Error: "<span id='login-error'></span>"</p>
+                <p>Please retry.</p>
+            </div>
+            <div class="actions">
+                <div class="ui green approve button">OK</div>
+            </div>
+        </div>
+    </div>

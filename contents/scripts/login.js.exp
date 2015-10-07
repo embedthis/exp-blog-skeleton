@@ -1,0 +1,60 @@
+/*
+    Login management
+ */
+
+$('#login').click(function() {
+    /* The user has clicked login / logout */
+    if (sessionStorage['exp-blog:authenticated']) {
+        var url = $('#login').data('logout');
+        $.get(url, function() {
+            window.location.href = '/';
+            delete sessionStorage['exp-blog:authenticated'];
+        });
+    } else {
+        /*
+            Fetch the user/login.esp page with an XSRF security token for form security
+         */
+        $.ajax({
+            url: $('#login').data('login'),
+            success: function(response) {
+                /* Semantic-UI moves the dialog, so must remove the old instance */
+                $('#login-dialog').remove();
+
+                /* Replace with a new dialog with new XSRF token */
+                $('#login-panel').replaceWith(response);
+
+                /* Display */
+                $('#login-dialog').modal('show');
+
+                /*
+                    Capture the submit event
+                 */
+                $('#login-form').submit(function() {
+                    var url = $(this).attr('action');
+                    var data = $('#login-form');
+                    /*
+                        Resubmit, but capture success or failure 
+                     */
+                    $.ajax({
+                        method: 'POST',
+                        data: data.serialize(),
+                        url: $(this).attr('action'),
+                        success: function() {
+                            sessionStorage['exp-blog:authenticated'] = true;
+                            window.location.href = '/comment/pending';
+                        },
+                        error: function(xh, status, error) {
+                            $('#login-error').text(error);
+                            $('#login-rejected').modal('show');
+                        },
+                    });
+                    return false;
+                });
+            },
+            error: function(xh, status, error) {
+                console.log(error);
+            },
+        });
+    }
+    return false;
+});

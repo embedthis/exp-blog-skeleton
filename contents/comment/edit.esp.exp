@@ -1,0 +1,35 @@
+{
+    layout: 'blog-admin',
+    title:  'Edit Comment',
+}
+
+<%^ start
+            EdiRec      *rec = getRec();
+            EdiField    *fp;
+        %>
+        <h1><%= param("id") ? "Edit" : "Create" %> Comment</h1>
+
+        <form name='CommentForm' class='ui form' action='../comment/%$id' method="POST">
+            <% for (fp = 0; (fp = ediGetNextField(rec, fp, 1)) != 0; ) { %> 
+                <div class='field'>
+                    <label><%= stitle(fp->name) %></label>
+                    <div class='field <%= getFieldError(fp->name) ? "has-error" : "" %>'>
+                        <% 
+                            if (fp->type == EDI_TYPE_BOOL) {
+                                input(fp->name, "{class: 'ui radio checkbox'}"); 
+                            } else {
+                                input(fp->name, "{class: 'ui'}"); 
+                            }
+                            %>
+                    </div>
+                </div>
+            <% } %>
+            <div class='inline field'>
+                <input type='submit' class='ui primary button' name="submit" value="Save">
+                <a href='list'><button class='ui button' type="button">Cancel</button></a>
+                <% if (hasRec()) { %>
+                    <input type='submit' class='ui button' name="submit" value="Delete">
+                <% } %>
+                <% inputSecurityToken(); %>
+            </div>
+        </form>

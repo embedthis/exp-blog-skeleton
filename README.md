@@ -6,9 +6,12 @@ Expansive HTML skeleton plugin.
 This provides:
 
  * Configuration for Expansive plugins: 
+    * [exp-blog](https://github.com/embedthis/exp-blog) for basic blogging
     * [exp-css](https://github.com/embedthis/exp-css) for CSS files
     * [exp-less](https://github.com/embedthis/exp-less) for Less files
-    * [exp-j](https://github.com/embedthis/exp-js) for script files
+    * [exp-js](https://github.com/embedthis/exp-js) for script files
+    * [exp-md](https://github.com/embedthis/exp-md) for Markdown files
+    * [exp-reload](https://github.com/embedthis/exp-reload) for dynamic browser reloading
  * Default layout 
  * Default partials for header, navigation and footer
  * Starter home page
@@ -36,14 +39,23 @@ mangling of scripts.
     If specified, the "dependencies" map will be automatically created. 
 * compile-less-css.dependencies &mdash; Explicit map of dependencies if not using "stylesheet". 
 * compile-less-css.documents &mdash; Array of less files to compile.
-* prefix-css.enable &mdash; Enable running autoprefixer on CSS files to handle browser specific extensions.
-* minify-css.enable &mdash; Enable minifying CSS files.
-* minify-js.enable &mdash; Enable minifying script files.
-* minify-js.files &mdash; Array of files to minify. Files are relative to 'source'.
-* minify-js.compress &mdash; Enable compression of script files.
-* minify-js.mangle &mdash; Enable mangling of Javascript variable and function names.
-* minify-js.dotmin &mdash; Set '.min.js' as the output file extension after minification. Otherwise will be '.js'.
-* minify-js.exclude &mdash; Array of files to exclude from minification. Files are relative to 'source'.
+
+* css.dotmin &mdash; Use '.min.css' as the output file extension after minification. Otherwise will be
+    '.css'.  Default to true.
+* css.enable &mdash; Enable processing CSS files. Defaults to true.
+
+* js.compress &mdash; Enable compression of script files. Defaults to true.
+* js.dotmin &mdash; Set '.min.js' as the output file extension after minification. Otherwise will be '.js'. Defaults to true.
+* js.enable &mdash; Enable minifying script files. Defaults to true.
+* js.force &mdash; Force the minification of script files regardless of whether a minified version already exists. Defaults to false.
+* js.inline &mdash; Filename to contain extracted inline scripts. Defaults to null.
+* js.mangle &mdash; Enable mangling of Javascript variable and function names. Defaults to true.
+* js.minify &mdash; Enable minifying of Javascript files. Default to false.
+* js.usemap &mdash; Use minified Javascript if corresponding source maps is present. Default to true.
+* js.usemin &mdash; Use minified Javascript if present. Default to true.
+* minify-html.enable &mdash; Enable minifying HTML files.
+* minify-html.options &mdash; Command line options to html-minifier.
+    to disable the use of minified resources.
 
 ```
 {
@@ -54,19 +66,16 @@ mangling of scripts.
             dependencies: { 'css/all.css.less' : '**.less' },
             documents: [ '!**.less', '**.css.less' ]
         },
-        'prefix-css': {
-            enable: true,
+        'css': {
+            dotmin:     false,
         },
-        'minify-css': {
-            enable: true,
-        },
-        'minify-js': {
-            enable: true,
-            files:      null,
+        'js': {
             compress:   true,
             mangle:     true,
             dotmin:     false,
-            exclude:    []
+        },
+        'minify-html': {
+            'enable': false
         }
     }
 }
@@ -74,4 +83,4 @@ mangling of scripts.
 
 ### Get Pak from
 
-[https://embedthis.com/pak/](https://embedthis.com/pak/download.html)
+[https://embedthis.com/pak/](https://embedthis.com/pak/)

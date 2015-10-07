@@ -1,12 +1,16 @@
-
     <div class="masthead">
         <div class="ui fixed inverted pointing menu">
             <div class="left menu">
-                <a class="item <@= active('Home') @>" href="@~/index.html">Home</a>
+                <a class="item <@= active('Home') @>" href="/">Home</a>
                 <a class="item <@= active('Archive') @>" href="@~/archive.html">Archive</a>
                 <a class="item <@= active('Videos') @>" href="@~/categories/Videos/">Videos</a>
             </div>
-            <a class="logo" href="@~/index.html">@={meta.blog.title}</a>
+            <div id="login" data-login="@~/user/login.esp" data-logout="/user/logout" class="right menu">
+                <span id="login-state" class="item">Login</span>
+                <!-- Replaced at runtime with login.esp which includes an XSRF token -->
+                <div id="login-panel"></div>
+            </div>
+            <a class="logo" href="@~/">@={meta.blog.title}</a>
             <div class="description">@={meta.blog.description}</div>
         </div>
     </div>

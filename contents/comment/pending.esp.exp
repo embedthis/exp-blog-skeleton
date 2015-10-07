@@ -1,0 +1,34 @@
+{
+    layout: 'blog-admin',
+    title: 'Pending Comments',
+}
+
+        <%^ start
+            EdiGrid     *grid = readTable("comment");
+            EdiRec      *rec;
+            EdiField    *fp;
+        %>
+        <h1>Pending Comments</h1>
+        <table class='ui table'>
+            <thead>
+                <tr><%
+                    if (grid && grid->nrecords) {
+                        rec = grid->records[0];
+                        for (fp = 0; (fp = ediGetNextField(rec, fp, 1)) != 0; ) { 
+                            render("<th>%s</th>\n", stitle(fp->name));
+                        }
+                    } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (rec = 0; (rec = ediGetNextRec(grid, rec)) != 0; ) { 
+                        if (smatch(getField(rec, "approved"), "1")) continue;
+                 %>
+                    <tr class="clickable" data-href="<%= uri("%s/review", rec->id) %>"'>
+                        <% for (fp = 0; (fp = ediGetNextField(rec, fp, 1)) != 0; ) { %>
+                            <td><%= ediFormatField(0, fp); %></td>
+                        <% } %>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>

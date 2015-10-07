@@ -1,0 +1,5 @@
+                    <@ if (meta.blog.youtube) { @>
+                        <script src="https://apis.google.com/js/platform.js"></script>
+                        <div class="g-ytsubscribe" data-channelid="@={meta.blog.youtube.id}" 
+                            data-layout="default" data-count="hidden"></div>
+                    <@ } @>

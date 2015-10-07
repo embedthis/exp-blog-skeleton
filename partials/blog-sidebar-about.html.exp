@@ -1,7 +1,7 @@
 <@ if (meta.blog.author) { @>
     <div class="about">
         <h3>About <@= meta.blog.author.name.split(' ')[0] @></h3>
-        <img class="ui right floated image" src="@~/@={meta.blog.author.image}" alt="author">
+        <img class="ui image" src="@~/@={meta.blog.author.image}" alt="author">
         <p class="slogan">@={meta.blog.author.about}</p>
     </div>
 <@ } @>

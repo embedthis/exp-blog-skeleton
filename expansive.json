@@ -39,6 +39,47 @@
             '?recent': 5,
             '?rss': true,
         }
+    },
+    "debug": {
+        "services": {
+            "compress": {
+                "?enable": false
+            },
+            "reload": {
+                "?enable": false
+            },
+            "minify-html": {
+                "?enable": false
+            },
+            "render-js": {
+                "?usemin": false,
+                "?usemap": false
+            }
+        }
+    },
+    "release": {
+        "services": {
+            "compress": {
+                "?enable": true
+            },
+            "reload": {
+                "?enable": false
+            },
+            "minify-css": {
+                "?minify": true
+            },
+            "minify-js": {
+                "?minify": true
+            },
+            "render-css": {
+                "?usemin": true,
+                "?usemap": false
+            },
+            "render-js": {
+                "?usemin": true,
+                "?usemap": false
+            }
+        }
     }
 }
 

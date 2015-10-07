@@ -1,0 +1,15 @@
+<@ if (meta.blog.comments && meta.comments !== false) { 
+    addItems('scripts', 'scripts/comment.js')
+ @>
+    <!-- Fields replace by the comment controller insertComments -->
+    <div id="comments" class="comments">
+        __COMMENTS__
+    </div>
+    <@ if (meta.comments == 'closed') { @>
+        <div class="ui red ribbon label">Comments Closed</div>
+    <@ } else { @>
+        <button id="comment" data-href="@~/comment/comment.esp" class="ui tiny blue button">Post a Comment</button>
+        <!-- Replaced at runtime with comment.esp which includes an XSRF token -->
+        <div id="comment-panel"></div>
+    <@ } @>
+<@ } @>
