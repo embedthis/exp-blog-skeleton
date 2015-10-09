@@ -7,11 +7,12 @@
         "blog"
     ],
     "dependencies": {
+        "exp-blog": "~0.3",
+        "exp-canon": "~0.1",
+        "exp-css": "~0.3",
         "exp-js": "~0.3",
         "exp-less": "~0.3",
-        "exp-css": "~0.3",
         "exp-reload": "~0.3",
-        "exp-blog": "~0.3",
         "exp-md": "~0.2"
     },
     "devDependencies": {
