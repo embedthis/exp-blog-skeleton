@@ -48,12 +48,8 @@
             "reload": {
                 "?enable": false
             },
-            "minify-html": {
+            "html": {
                 "?enable": false
-            },
-            "render-js": {
-                "?usemin": false,
-                "?usemap": false
             }
         }
     },
@@ -65,17 +61,13 @@
             "reload": {
                 "?enable": false
             },
-            "minify-css": {
-                "?minify": true
-            },
-            "minify-js": {
-                "?minify": true
-            },
-            "render-css": {
+            "css": {
+                "?minify": true,
                 "?usemin": true,
                 "?usemap": false
             },
             "render-js": {
+                "?minify": true,
                 "?usemin": true,
                 "?usemap": false
             }
