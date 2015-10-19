@@ -42,34 +42,34 @@
     },
     "debug": {
         "services": {
-            "compress": {
-                "?enable": false
-            },
-            "reload": {
+            "gzip": {
                 "?enable": false
             },
             "html": {
                 "?enable": false
-            }
-        }
-    },
-    "release": {
-        "services": {
-            "compress": {
-                "?enable": true
             },
             "reload": {
                 "?enable": false
             },
+        }
+    },
+    "release": {
+        "services": {
             "css": {
                 "?minify": true,
                 "?usemin": true,
                 "?usemap": false
             },
+            "gzip": {
+                "?enable": true
+            },
             "js": {
                 "?minify": true,
                 "?usemin": true,
                 "?usemap": false
+            },
+            "reload": {
+                "?enable": false
             }
         }
     }

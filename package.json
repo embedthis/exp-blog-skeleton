@@ -13,10 +13,10 @@
         "exp-js": "~0.3",
         "exp-less": "~0.3",
         "exp-reload": "~0.3",
-        "exp-md": "~0.2"
+        "exp-markdown": "~0.3"
     },
     "devDependencies": {
-        "expansive": ">=0.6.0",
+        "expansive": ">=0.7.0",
         "pak": ">=0.11.3"
     },
     "licenses": "GPL",

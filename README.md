@@ -34,11 +34,11 @@ mangling of scripts.
 
 #### expansive.json
 
-* compile-less-css.enable &mdash; Enable the compile-less-css service to process less files.
-* compile-less-css.stylesheet &mdash; Primary stylesheet to update if any less file changes.
+* less.enable &mdash; Enable the less service to process less files.
+* less.stylesheet &mdash; Primary stylesheet to update if any less file changes.
     If specified, the "dependencies" map will be automatically created. 
-* compile-less-css.dependencies &mdash; Explicit map of dependencies if not using "stylesheet". 
-* compile-less-css.documents &mdash; Array of less files to compile.
+* less.dependencies &mdash; Explicit map of dependencies if not using "stylesheet". 
+* less.documents &mdash; Array of less files to compile.
 
 * css.dotmin &mdash; Use '.min.css' as the output file extension after minification. Otherwise will be
     '.css'.  Default to true.
@@ -48,19 +48,18 @@ mangling of scripts.
 * js.dotmin &mdash; Set '.min.js' as the output file extension after minification. Otherwise will be '.js'. Defaults to true.
 * js.enable &mdash; Enable minifying script files. Defaults to true.
 * js.force &mdash; Force the minification of script files regardless of whether a minified version already exists. Defaults to false.
-* js.inline &mdash; Filename to contain extracted inline scripts. Defaults to null.
+* js.extract &mdash; Filename to contain extracted inline scripts. Defaults to false.
 * js.mangle &mdash; Enable mangling of Javascript variable and function names. Defaults to true.
 * js.minify &mdash; Enable minifying of Javascript files. Default to false.
 * js.usemap &mdash; Use minified Javascript if corresponding source maps is present. Default to true.
 * js.usemin &mdash; Use minified Javascript if present. Default to true.
-* minify-html.enable &mdash; Enable minifying HTML files.
-* minify-html.options &mdash; Command line options to html-minifier.
-    to disable the use of minified resources.
+* html.enable &mdash; Enable minifying HTML files.
+* html.options &mdash; Command line options to html-minifier.
 
 ```
 {
     services: {
-        'compile-less-css': {
+        'less': {
             enable: true,
             stylesheet: 'css/all.css',
             dependencies: { 'css/all.css.less' : '**.less' },
@@ -74,7 +73,7 @@ mangling of scripts.
             mangle:     true,
             dotmin:     false,
         },
-        'minify-html': {
+        'html': {
             'enable': false
         }
     }
