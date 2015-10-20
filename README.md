@@ -7,11 +7,14 @@ This provides:
 
  * Configuration for Expansive plugins: 
     * [exp-blog](https://github.com/embedthis/exp-blog) for basic blogging
+    * [exp-canon](https://github.com/embedthis/exp-canon) to emit canonical link references
     * [exp-css](https://github.com/embedthis/exp-css) for CSS files
+    * [exp-html](https://github.com/embedthis/exp-html) to minify HTML files
     * [exp-less](https://github.com/embedthis/exp-less) for Less files
     * [exp-js](https://github.com/embedthis/exp-js) for script files
-    * [exp-md](https://github.com/embedthis/exp-md) for Markdown files
+    * [exp-markdown](https://github.com/embedthis/exp-markdown) for Markdown files
     * [exp-reload](https://github.com/embedthis/exp-reload) for dynamic browser reloading
+    * [jquery](https://github.com/jquery/jquery) for client side DOM manipulation
  * Default layout 
  * Default partials for header, navigation and footer
  * Starter home page
@@ -22,23 +25,20 @@ This provides:
 
 ### Description
 
-The HTML skeleton is a basic starter skeleton for Expansive. It provides a default layout,
-partial pages and is configured to use Less stylesheets. Extensions are installed
-to process less stylesheets and minify scripts.
+The HTML skeleton is a basic starter skeleton for Expansive. It provides a default layout, partial pages and is configured to use Less stylesheets. Extensions are installed to process less stylesheets and minify scripts.
 
-The skeleton is configured for a "debug" and "release" mode of operation via the 
-"mode" property in package.json. By default, debug mode will disable minification and
-mangling of scripts.
+The skeleton is configured for a "debug" and "release" mode of operation via the "pak.mode" property in package.json. By default, debug mode will disable minification and mangling of scripts.
 
 ### Configure
 
 #### expansive.json
 
+* canon.enable &mdash; Enable the canon service to emit canonical link elements for index pages.
 * less.enable &mdash; Enable the less service to process less files.
+* less.dependencies &mdash; Explicit map of dependencies if not using "stylesheet". 
+* less.files &mdash; Array of less files to compile.
 * less.stylesheet &mdash; Primary stylesheet to update if any less file changes.
     If specified, the "dependencies" map will be automatically created. 
-* less.dependencies &mdash; Explicit map of dependencies if not using "stylesheet". 
-* less.documents &mdash; Array of less files to compile.
 
 * css.dotmin &mdash; Use '.min.css' as the output file extension after minification. Otherwise will be
     '.css'.  Default to true.
