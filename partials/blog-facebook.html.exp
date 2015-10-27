@@ -1,0 +1,8 @@
+                <@ 
+                    if (meta.blog.facebook && meta.blog.facebook.id) { 
+                        addItems('scripts', 'scripts/facebook.js*')
+                     @>
+                        <span class="facebook">
+                            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+                        </span>
+                <@ } @>
