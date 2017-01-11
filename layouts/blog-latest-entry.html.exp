@@ -1,4 +1,5 @@
 {
     layout: ''
 }
+	<@ partial('blog-post-header') @>
 	<@ content @>
