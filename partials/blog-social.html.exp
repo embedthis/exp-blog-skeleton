@@ -1,4 +1,3 @@
                     <div class="social">
-                        <!-- Host buttons under the /social route so they can use a restrictive CSP header -->
-                        <iframe class="social-buttons" frameborder="0" scrolling="no" src="@~/social/buttons.html"></iframe>
+                        <@ partial('blog-twitter') @>
                     </div>
