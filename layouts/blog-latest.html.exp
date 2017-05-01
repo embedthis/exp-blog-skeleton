@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SenseDeep Latest Blog Post</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Cloud security reimagined.">
+        <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+        <link href="../lib/semantic-ui/semantic.min.css" rel="stylesheet" type="text/css" />
+        <link href="../css/help.min.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="blog">
+            <div class="ui page">
+                <div class="post">
+                    <@ content @>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
