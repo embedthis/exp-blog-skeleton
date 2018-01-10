@@ -40,6 +40,7 @@
             "to": "${TOP}",
             "overwrite": false
         },
-        "manage": "expansive.json"
+        "manage": "expansive.json",
+        "origin": "embedthis/exp-blog-skeleton"
     }
 }
