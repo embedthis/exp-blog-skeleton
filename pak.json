@@ -24,23 +24,21 @@
         "type": "git",
         "url": "git://github.com/embedthis/exp-blog-skeleton.git"
     },
-    "pak": {
-        "blend": {
-            "pak": {
-                "?mode": "debug",
-                "?import": true
-            }
-        },
-        "export": {
-            "from": [
-                "contents/**",
-                "layouts/**",
-                "partials/**"
-            ],
-            "to": "${TOP}",
-            "overwrite": false
-        },
-        "manage": "expansive.json",
-        "origin": "embedthis/exp-blog-skeleton"
-    }
+    "blend": {
+        "pak": {
+            "?mode": "debug",
+            "?import": true
+        }
+    },
+    "export": {
+        "from": [
+            "contents/**",
+            "layouts/**",
+            "partials/**"
+        ],
+        "to": "${TOP}",
+        "overwrite": false
+    },
+    "manage": "expansive.json",
+    "origin": "embedthis/exp-blog-skeleton"
 }
