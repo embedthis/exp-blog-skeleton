@@ -25,10 +25,8 @@
         "url": "git://github.com/embedthis/exp-blog-skeleton.git"
     },
     "blend": {
-        "pak": {
-            "?mode": "debug",
-            "?import": true
-        }
+        "?profile": "debug",
+        "?import": true
     },
     "export": {
         "from": [
