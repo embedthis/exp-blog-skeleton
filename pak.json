@@ -8,7 +8,7 @@
     ],
     "dependencies": {
         "exp-blog": "~0.3",
-        "exp-canon": "~0.1",
+        "exp-canon": "~0.3",
         "exp-css": "~0.3",
         "exp-js": "~0.3",
         "exp-less": "~0.3",
