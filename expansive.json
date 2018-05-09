@@ -40,7 +40,7 @@
             '?rss': true,
         }
     },
-    "debug": {
+    "dev": {
         "services": {
             "gzip": {
                 "?enable": false
@@ -53,7 +53,7 @@
             },
         }
     },
-    "release": {
+    "prod": {
         "services": {
             "css": {
                 "?minify": true,

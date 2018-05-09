@@ -82,4 +82,4 @@ The skeleton is configured for a "debug" and "release" mode of operation via the
 
 ### Get Pak from
 
-[https://embedthis.com/pak/](https://embedthis.com/pak/)
+[https://www.embedthis.com/pak/](https://www.embedthis.com/pak/)
