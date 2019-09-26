@@ -7,13 +7,13 @@
         "blog"
     ],
     "dependencies": {
-        "exp-blog": "~0.3",
-        "exp-canon": "~0.3",
-        "exp-css": "~0.3",
-        "exp-js": "~0.3",
-        "exp-less": "~0.3",
-        "exp-reload": "~0.3",
-        "exp-markdown": "~0.3"
+        "embedthis/exp-blog": "~0.3",
+        "embedthis/exp-canon": "~0.3",
+        "embedthis/exp-css": "~0.3",
+        "embedthis/exp-js": "~0.3",
+        "embedthis/exp-less": "~0.3",
+        "embedthis/exp-reload": "~0.3",
+        "embedthis/exp-markdown": "~0.3"
     },
     "devDependencies": {
         "expansive": ">=0.7.0",
