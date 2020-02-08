@@ -38,7 +38,10 @@
             '?posts': 'posts',
             '?recent': 5,
             '?rss': true,
-        }
+        },
+        analytics: {
+            code: "UA-CODE"
+        },
     },
     "dev": {
         "services": {
