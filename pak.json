@@ -1,19 +1,19 @@
 {
     "name": "exp-blog-skeleton",
     "description": "Blog Skeleton for Expansive",
-    "version": "0.2.2",
+    "version": "1.0.0",
     "keywords": [
         "expansive-plugin",
         "blog"
     ],
     "dependencies": {
-        "embedthis/exp-blog": "~0.3",
-        "embedthis/exp-canon": "~0.3",
-        "embedthis/exp-css": "~0.3",
-        "embedthis/exp-js": "~0.3",
-        "embedthis/exp-less": "~0.3",
-        "embedthis/exp-reload": "~0.3",
-        "embedthis/exp-markdown": "~0.3"
+        "embedthis/exp-blog": "~1",
+        "embedthis/exp-canon": "~1",
+        "embedthis/exp-css": "~1",
+        "embedthis/exp-js": "~1",
+        "embedthis/exp-less": "~1",
+        "embedthis/exp-reload": "~1",
+        "embedthis/exp-markdown": "~1"
     },
     "devDependencies": {
         "expansive": ">=0.7.0",
